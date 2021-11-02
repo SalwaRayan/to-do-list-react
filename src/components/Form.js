@@ -17,16 +17,16 @@ class Form extends Component {
     e.preventDefault()
 
     this.props.addTask(this.state.task)
-    this.setState({ task: ""})
+    // this.setState({ task: ""})
   }
 
-  render() {
-    // const { addTask } = this.props
+  
 
+  render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" onChange={this.handleTaskDescriptionChange} />
-        <button>Submit</button>
+      <form className="input-group mb-3" onSubmit={this.handleSubmit}>
+        <input type="text" className="form-control" onChange={this.handleTaskDescriptionChange} />
+        <button className="btn btn-outline-success">Submit</button>
       </form>
     );
   }
