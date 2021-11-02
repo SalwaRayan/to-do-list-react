@@ -34,6 +34,10 @@ class App extends Component {
     this.setState({ editLine: index })
   }
 
+  editTask = () => {
+    this.setState({ editLine: null})
+  }
+
   render() {
     return (
       <div className="container">
@@ -41,7 +45,7 @@ class App extends Component {
         <Form addTask={this.addTask}/>
         <div>
           <h2 className="my-3">List</h2>
-          <List tasks={this.state.tasks} deleteTask={this.deleteTask} onEditLine={this.onEditLine} editLine={this.state.editLine}/>
+          <List tasks={this.state.tasks} deleteTask={this.deleteTask} onEditLine={this.onEditLine} editLine={this.state.editLine} editTask={this.editTask}/>
         </div>
       </div>
     );

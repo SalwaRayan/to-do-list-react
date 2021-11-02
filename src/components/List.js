@@ -8,7 +8,7 @@ class List extends Component {
 
   render() {
 
-    const { tasks, deleteTask, editLine, onEditLine } = this.props
+    const { tasks, deleteTask, editLine, onEditLine, editTask } = this.props
 
     return (
       <div className="row align-items-center">
@@ -19,7 +19,7 @@ class List extends Component {
               {editLine === index ? (
                 <>
                   <label>Edit description</label>
-                  <input value={task.description} type="text" className="form-control"/>
+                  <input placeholder={task.description} type="text" className="form-control"/>
                 </>
                 ) : (
                 <>
